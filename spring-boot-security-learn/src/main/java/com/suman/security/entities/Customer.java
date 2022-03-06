@@ -2,6 +2,7 @@ package com.suman.security.entities;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -28,7 +29,7 @@ public class Customer {
 	private String pwd;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "customer", fetch=FetchType.EAGER)
+	@OneToMany(mappedBy = "customer", fetch=FetchType.EAGER, cascade = CascadeType.ALL)
 	private Set<Authority> authorities;
 	
 	@Transient

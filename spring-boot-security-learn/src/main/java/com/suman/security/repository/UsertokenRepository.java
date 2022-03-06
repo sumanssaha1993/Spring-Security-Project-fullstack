@@ -8,5 +8,5 @@ import com.suman.security.entities.Usertoken;
 @Repository
 public interface UsertokenRepository extends CrudRepository<Usertoken, Long> {
 
-	Usertoken findTokenById(int custId);
+	Usertoken findTokenById(int id);
 }
